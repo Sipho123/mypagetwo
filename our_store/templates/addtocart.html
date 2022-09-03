@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        {% block title %}
+        <title>add to cart</title>
+        {% endblock %}
+
+       
+        {% block content %}
+        <br><br>
+        <div class="btn-group btn-group-justified" >
+            
+            <centre><h3> </h3></centre>
+            
+            <a href="{% url 'our_store:store' %}" class="btn btn-primary">Back to Our Store</a>
+            
+        </div> 
+        <br><br>
+        <div class="row">
+            
+            <h4>Product added to cart successfully</h4>
+        </div>
+           
+            
+            
+        
+      
+       
+        {% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% block title %}
+    <title>Logistics</title>
+    {% endblock title %}
+    <br>
+    <center><strong>
+        <h1>Logistics</h1>
+    </strong></center>
+    <hr>
+    <div class="ui grid">
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src={% static 'image/istockphoto-1138429558-612x612.jpg' %}>
+            </div>
+            <div class="col-md-6">
+                <img src={% static 'image/istockphoto-1138429558-612x612.jpg' %}>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    <strong>RFID technology is currently making a huge difference in the transportation sector due to its 
+                        ability to support an incredibly versatile range of applications. Why is RFID being used so much 
+                        in this sector in particular, and how could you make the most of it?</strong>
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h3>Automated Ticketing for Public Transport</h3>
+                    This clever use of RFID is not only great for speeding up the process of issuing tickets for the transport company 
+                    themselves, but it also benefits their consumers. How so? As we discussed before, RFID technology doesn’t require a 
+                    line of sight to be used and so it is extremely versatile and quick to use. This helps to reduce queuing times and 
+                    human errors which in turn will maximize customer satisfaction!
+                </p>
+                <hr>
+                <p>
+                    <h3>RFID tags on vehicles</h3>
+                            This method is often used to track when vehicles arrive back at the depot, this then accurately keeps a record of the 
+                            available vehicles at any given time! Other applications include vehicle identification when arriving at a site. 
+                            These two ways of using RFID greatly contribute to faster business processes, planning and in turn the overall success
+                            of the whole transportation company.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+        
+{% endblock content %}

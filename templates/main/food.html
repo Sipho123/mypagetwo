@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %}
+    <title>food</title>
+    {% endblock title %}
+
+    {% block content %}
+    <center><strong>
+        <h1>RFID in Food</h1>
+    </strong></center>
+    <hr>
+    
+        <div class="ui grid">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--<img src={% static 'image/6-Axis-Robot-1.jpg' %}>--> 
+                    <img src={% static 'image/foodimages.jpg' style="width:50%;height:60%;" %}>
+                    <img src={% static 'image/fruitimages.jpg' style="width:50%;height:60%;" %}>
+                    
+                   
+                </div>  
+                <div class="col-md-6">
+                    <h3>Mature RFID technology is ready to take on the food industry</h3>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src={% static 'image/food2images.jpg' style="width:50%;height:60%;" %}>
+                    <img src={% static 'image/download (1).jpg' style="width:50%;height:60%;" %}>
+                </div>
+                <div class="col-md-6">
+                    <strong>
+                        Radio frequency identification (RFID) has become established as a dominant force in the apparel industry,
+                        with the technology finally approaching mass adoption after years of threatening to.
+                        The technology involves tags or “labels” that emit a small radio frequency, allowing radio
+                        stock counts that are both highly accurate and incredibly fast compared to traditional methods. 
+                        The result of this is a very up to date, or even real-time, view of stock. The main use cases responsible for 
+                        the technology’s success include the increased process efficiency, superior inventory management and the enablement 
+                        of seamless omnichannel services.
+                    </strong>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src={% static 'image/download.jpg' style="width:50%;height:60%;" %}>
+                    <img src={% static 'image/food3images.jpg' style="width:50%;height:60%;" %}>
+                </div>
+                <div class="col-md-6">
+                    <strong>
+                        That’s the story of RFID in apparel, but what about other retail industries? After years of 
+                        technical roadblocks that have kept the technology out of other markets, the technology has 
+                        matured to a point where new industries are RFID-viable for the first time ever. The beauty and 
+                        cosmetics industry is beginning to take notice of RFID, and perhaps now food retailers should do the same.
+                        Why? Because modern RFID is so well positioned to tackle the food industry’s unique challenges,
+                        like optimising inventory, minimising food waste and increasing the traceability of the supply chain.
+                        Whilst this sounds great, the limitations of the technology that we mentioned earlier have 
+                        historically meant RFID just wasn’t viable for the food market. As well as liquid and metallic products 
+                        traditionally interfering with the RFID signals, the food industry’s drastically lower average article price 
+                        compared to the apparel industry were significant roadblocks. But this changing…
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
+{% endblock content %}

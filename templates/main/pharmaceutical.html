@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %}
+    <title>pharmatucal</title>
+    {% endblock title %}
+
+{% block content %}
+<br>
+    <center><strong>
+    <h1>RFID in Pharmatical</h1>
+    </strong></center>
+        <hr>
+        <div class="ui grid">
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src={% static 'image/medical001.jpg' %}>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                    <p>
+                        <h1>RFID labels benefits manufacturers, hospitals and patients</h1>
+                        Patient safety is paramount when it comes to pharmaceutical products and medical devices. 
+                        That is why certain types of labels are mandatory for manufacturers, for instance to prevent 
+                        counterfeit drugs or foods from being sold. Improved visibility along the entire delivery and 
+                        value chain also increases economic efficiency for transport and stock levels.
+                    </p>
+                    <hr>
+                    <p>
+                        <h1> RFID labels increases protection against counterfeiting</h1>
+                        Every year, product piracy costs the industry several billion US dollars. Profits are not only
+                        impacted by the sales of counterfeit and manipulated medication. Pharmaceutics companies also 
+                        pay the price of damaged reputations and illegitimate product-liability cases. Product marking
+                        plays a key role in anti-counterfeiting measures.
+                    </p>
+                    <hr>
+                    <strong>Tiny transponders</strong> in RFID labels store individual product information. If needed, the 
+                            information can be quickly accessed for real-time tracking and authentication. Paired with 
+                            special RFID readers, these labels can even be used to detect possible manipulation and serve 
+                            as an effective deterrent.
+                </div>
+            </div>
+        </div>
+{% endblock content %}

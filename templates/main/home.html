@@ -1,0 +1,398 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<br>
+<div class="ui grid">
+    <div class="row">
+        <div class="four wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4);">
+                <h1>Who is RFID for?</h1>
+                <p>RFID works efficient in all Industries</p>
+                <div class="content">
+                    <div class="btn-group-vertical" style="background-color: rgba(26, 22, 15, 0.4);">
+                        <div class="vertical-menu">
+                            <a class="active" href="/agriculture/">AGRICULTURE</a>
+                            <a href="/food/">FOOD</a>
+                            <a href="/hospitality/">HOSPITALITY</a>
+                            <a href="/logistics/">LOGISTICS</a>
+                            <a href="/manufacturing/">MANUFACTURING</a>
+                            <a href="/medical/">MEDICAL</a>
+                            <a href="/pharmaceutical/">PHARMACEUTICAL</a>
+                            <a href="/retail/">RETAIL</a>
+                            <a href="/supply_chain/">SUPPLY CHAIN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4);">
+                    <li>
+                        <a href="{% url 'our_store:store' %}">
+                            <h1>OUR STORE</h1>
+                              
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+                                            <!-- SLIDE -->
+        <div class="twelve wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4);">
+                <div class="content">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                          <li data-target="#demo" data-slide-to="0" class="active"></li>
+                          <li data-target="#demo" data-slide-to="1"></li>
+                          <li data-target="#demo" data-slide-to="2"></li>
+                          <li data-target="#demo" data-slide-to="3"></li>
+                          <li data-target="#demo" data-slide-to="4"></li>
+
+                        </ul>
+                        
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="{% static 'image/ECO-T17 slide1.png' %}" alt="" width="1100" height="500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'image/ECO-T60 (3) (200).jpg' %}" alt="" width="1100" height="500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'image/RFID-Tag.jpg' %}" alt="" width="1100" height="500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'image/ECO-T42 (1) (1).jpg' %}" alt="" width="1100" height="500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'image/vigneti-massa-nfc-screw-caps.jpg' %}" alt="" width="1100" height="500">
+                          </div>
+                        </div>
+                        
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </a>
+                      </div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+                                                            <!-- DEAR CLIENT -->
+    <div class="row">
+        <div class="sixthin wide column">
+            <h2> Dear Client,</h2>
+            <div class="ui fluid card" style=" background-color: rgba(167, 150, 212, 0.4); ">
+            <a  background-color: rgba(18, 15, 26, 0.4);
+            color: white;>
+            <p><strong>Thank you again for spending time with us.</strong>We are pleased you have meet a SOLUTION to your busisness.
+              
+                RFID ensures every business a customised traceability solution to meet not only today’s challenges
+                but also to anticipate those of the future...</p>
+                <p><strong>Yes,</strong> we still stand firm to our mission.</p> <p><strong>We</strong> help businesses to transform from 
+                    manual operations to digital,
+                    by implementing Radio Frequency Technology.</p>
+            </p></a>
+            </div>
+        </div>
+    </div>
+                                                            <!-- WHAT WE DO -->        
+    <div class="row">
+        <div class="sixthin wide column">
+            <h2>WHAT we DO</h2>
+            <div class="ui fluid card" style="background-color: rgba(18, 15, 26, 0.4) ">
+                <style>
+                    .head{ background-color: brown; height: 100vh; background-size: cover;}
+                    .row { max-width: 1200px; margin: auto;}
+                    .main-nav { float: right; list-style: none; margin-top: 30px;}
+                    .main-nav li { display: inline-block;}
+                    .main-nav li a { color: white ;  padding: 5px 10px;  font-family: "Roboto", sans-serif; font-size: 15px;}
+                    .main-nav li.active a{ border: 1px solid white;}
+                    .main-nav li a:hover { border: 1px solid white; }
+                    .logo {width: 150px; height: auto; float: left; background-color: chocolate;}
+                </style>
+                <div class="row">
+                    <strong>
+                    <ul class="main-nav">
+                        <li class="active"><a>We do Consultation</a></li>
+                        <li><a>We do Integration</a></li>
+                        <li><a>We do Deployment</a></li>
+                        <li><a>We do Installation</a></li>
+                        <li><a>We do Designing</a></li>
+                        <li><a>We do Support</a></li>
+                        <li><a>We do Training</a></li>
+                    </ul>
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+                                                    <!-- CONSUTATION -->
+        
+    <div class="row">
+        <div class="sixthin wide column">
+            <div class="ui fluid card"  style="background-color: rgba(18, 15, 26, 0.4) " >
+                <strong style="color: white"><center>
+                <p>Take a first step in setting up a business solution that ensures a Return on Invested Capital (ROI).</p>
+                <h2><a href="{% url 'consultation-view' %}" style="color: white">Schedule your Consultation now</a></h2>
+                </center></strong>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <strong>
+            <h2>RFID assurance to your business</h2>
+        </strong>
+            <div class="ui fluid card" style="background-color: rgba(18, 15, 26, 0.4) ">
+                <style>
+                    .head{ background-color: brown; height: 100vh; background-size: cover;}
+                    .row { max-width: 1200px; margin: auto;}
+                    .main-nav { float: right; list-style: none; margin-top: 30px;}
+                    .main-nav li { display: inline-block;}
+                    .main-nav li a { color: white ;  padding: 5px 10px;  font-family: "Roboto", sans-serif; font-size: 15px;}
+                    .main-nav li.active a{ border: 1px solid white;}
+                    .main-nav li a:hover { border: 1px solid white; }
+                    .logo {width: 150px; height: auto; float: left; background-color: chocolate;}
+                </style>
+                    <table class="table table-striped table-hover">
+                        <tr>
+                        <td>Increased revenues.</td>
+                        <td>No more tedious inventories and traditional boxing errors.</td>
+                        <td>Makes regular cycle counts possible with efficient RFID stock reads.</td>
+                        </tr>
+                        <tr>
+                        <td>Automatic data collection in the pharmaceutical & medical industry.</td>
+                        <td>RFID optimise your traceability process in real time.</td>
+                        <td>Item visibility makes replenishment easier and more accurate.</td>
+                        </tr>
+                        <tr>
+                        <td>Optimal warehousing by reading the labels of shipped and delivered goods.</td>
+                        <td>Tracking assets and managing inventory.</td>
+                        <td>Improving data accuracy and availability.</td>
+                        </tr>
+                        <tr>
+                        <td>Saving time and money through automation.</td>
+                        <td>Better control of production.</td>
+                        <td>More in-depth management information.</td>
+                        </tr>
+                        <tr>
+                        
+                        <td>Makes regular cycle counts possible with efficient RFID stock reads.</td>
+                        <td>Enhancing health and safety.</td>
+                        <td>Each second is productive.</td>
+                        </tr>
+                    </table>
+            </div>
+    </div>
+    <div class="row">
+        <div class="four wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4);">
+                <div class="content">
+                    <h1>RFID Retail</h1>
+                    <p>
+                    RFID optimises the actions of staff in sales areas and removes one of the most 
+                    irritating factors of the customer experience: waiting.
+                    </p> 
+                </div>
+            </div>
+        </div>
+        <div class="eight wide column" >
+            <img src={% static 'image/RFID-myths-debunked-scaled-e1656577730230.jpg' %}>
+        </div>
+        <div class="four wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4);">
+                <div class="content">
+                    <h1>RFID Hospitality</h1>
+                    <p>RFID tag helps hotels in understanding their customers. Few hotels offer RFID enabled cards to their frequent travelers. These RFID cards work as a room key. 
+                        Some hotel brands provide RFID enabled wristbands, through which they keep track of their guest activity..</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="eight wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4);">
+                <div class="content">
+                <h1>RFID Spaza Shop</h1>
+                Retailers are adopting RFID technology in large numbers to ensure instant product availability by raising their inventory accuracy to over 98%. 
+                Retailers adopt RFID for both inventory and supply chain management visibility, which is based on tagging all their products with RFID labels.
+                Tagging products automatically detect suspicious events such as items leaving the store in bulk or single items more likely to be stolen.
+                Track every unique item at critical areas in your stores, such as at the point-of-sale or your store entrance and exit.
+                After your RFID-based system identifies one or more items that are leaving the store without being paid for, 
+                it RINGS Alarm Notification to make the retailder aware.
+
+                RFID ordering system helps the retailer to order arcording to movent of stock to prevent non-moving items sitting on chelves for long. 
+                RFID adoption also creates an opportunity to optimize other store processes such as data collection and faster checkouts.
+                </div>
+            </div>
+        </div>
+        <div class="eight wide column" d="bg" style="background-image: url('{% static "image/SPAZASHOP (2).jpeg" %}')">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="eight wide column">
+            <div class="ui fluid card">
+                <img src={% static 'image/Assets tracking.png' %}>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4) ;">
+                <div class="content">
+                    <h1>RFID in Assets Tracking</h1>
+                   <p>RFID asset management systems allow you to keep track of individual items through the use of RFID tags attached to them. 
+                    The tags are read by fixed scanners installed on doorways and other key points or by staff using mobile phones or tablets..</p> 
+                </div>
+            </div>
+        </div>
+        <div class="four wide column" id="bg" style="background-image: url('{% static "image/Benefits-of-RFID-Technology-in-Retail-Industry - Copy.jpg" %}')";>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="four wide column">
+            <div class="ui fluid card"  style="background-color: rgba(167, 150, 212, 0.4) ">
+                <div class="content">
+                    <h1>in Automation</h1> 
+                        <p>Automobile manufacturers use RFID to track components during assembly and with completed vehicles post-assembly. 
+                            Auto dealers utilize the technology to track their inventory of vehicles for sale. 
+                            Dealerships also use RFID to make vehicle service more efficient, and to personally greet customers when they arrive.
+                        </p>    
+                </div>
+            </div>
+        </div>
+        <div class="eight wide column">
+            <div class="ui fluid card">
+                <img src={% static 'image/istockphoto-1138429558-612x612.jpg' %}>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4) ;">
+                <div class="content">
+                    <h1>RFID in Warehousing</h1>
+                   <p>RFID tags can tell you when items come in to or leave the warehouse: RFID readers can be placed at entrances and exits to your facility, allowing real-time tracking of inventory as it moves in and out of your warehouse.
+                    You can know immediately when a shipment has entered the warehouse, and track when items leave.</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="eight wide column" id="bg" style="background-image: url('{% static "image/Pharmatical Smart RFID Labels.png" %}')";>
+
+        </div>
+        <div class="eight wide column" >
+            <div class="ui fluid card" style="background-color: rgba(167, 150, 212, 0.4)";>
+                <div class="content">
+                    <h1>in Healthcare</h1> 
+                    <p>In your industry, there is no room for error. You need to have knowledge and control of your critical assets and medical equipment, no matter what. In the health and aged care sector you need to provide a high level of service and safety for your patients, and guests, and be more diligent than ever in the tracking and accountability of Portable Medical Equipment PME and PPE control. There’s a lot riding on every decision and action, and there’s a lot to lose. When it comes to medical equipment tracking and hospital asset management, certainty matters. The healthcare and aged care sector are one of the most highly regulated industries in the world. Good governance, compliance and risk mitigation are critical to your business. Your employees rely on having the right equipment in good condition for those that they serve. In your world, 
+                    it could be the difference between life and death. 
+                    </p>       
+                </div>
+            </div>
+        </div>
+    </div>
+                                            <!-- GET IN TOUCH -->
+                                            <centre><h1>Get in Touch</h1></centre>
+    <div class="row" id="bg" style="background-image: url('{% static "image/istockphoto-1177116437-612x612.jpg" %}')";>
+    
+        <div class="eight wide column">
+            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                <div class="content">
+                    <strong><p>Contact person:</p></strong> <p>Mr Happy Sipho Mahlangu</p>
+                        <strong><p>Cell Phone:</p></strong>     <p>0832227510</p>
+                        <strong><p>Email address:</p></strong> <p>siphomahlangu@rfidesign.co.za</p>
+                        <b> <p>
+                            22 Col John Blake Street |
+                            Tek Base |
+                            Lyttelton |
+                            Centurion |
+                            0140
+                        </b> </p>
+                    </b>
+                    <footer class="background-color: rgb(201, 224, 238) text-center text-white">
+                    <!-- Grid container -->
+                        <div class="container p-4 pb-0">
+                         <!-- Section: Social media -->
+                            <section class="mb-4">
+                                <!-- Facebook -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                                ><i class="fab fa-facebook-f"></i></a>
+                                <!-- Twitter -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                                ><i class="fab fa-twitter"></i></a>
+                                <!-- Instagram -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                                ><i class="fab fa-instagram"></i></a>
+                                <!-- Linkedin -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                                ><i class="fab fa-linkedin-in"></i></a>
+                            </section>
+                            <!-- Section: Social media -->
+                        </div>  
+                    </footer> 
+                </div>
+            </div>      
+        </div>    
+    
+                                            <!-- CONTACT FORM -->    
+        <div class="eight wide column" >
+            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                <div class="content">
+                    <div class="container">
+                        <button  type="button" class="btn btn-primary btn-lg btn-block">
+                            <a class="active" href="{% url 'consultation-view' %}" style="color: white ;" >Schadule your consultation now</a>
+                        </button>
+                        <button href="" type="button" class="btn btn-primary btn-lg btn-block">
+                            <a class="active" href="{% url 'get_in_touch-view' %}" style="color: white ;" >Send us an email</a>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block"></button>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div> 
+                                                                <!-- WHO WE ARE -->
+        <h1>Who we Are</h1>
+        <div class="row">
+            <div class="sixthin wide column">
+                <div class="ui fluid card" style="background-color: rgba(18, 15, 26, 0.4) ">
+                    <div class="content">
+                        <strong><a>
+                            We are a recently established RADIO FREQUENCY IDENTIFICATION business, 
+                            we are established in a fast-growing African market. RFIDESIGN has been established in 2019 in Pretoria, 
+                            Gauteng province, South Africa. We are dedicated to deliver high quality products to our customers, meanwhile, 
+                            we insist our sense of society responsibility and environmental protection duty.
+                            We thrive on bringing success in Information Technology industry through transparency, 
+                            accountability and oversight and passionately and all this by learning from both our customers and our competitors each time we interact. 
+                            We take the mission of promoting the popularity of RFID technology applications, 
+                            realizing intelligent data collection, improving efficiency, reducing costs, and creating benefits for users.
+
+                        </a></strong>
+                    </div>
+                </div>
+            </div> 
+        </div>                                                                  
+</div>
+{% block scripts %}
+
+    <script>
+        $(document).ready(function(){
+            console.log('working');
+        })
+
+        $('.carousel').carousel()
+        $('.carousel').carousel({
+            interval: 2000
+        })
+        $('#myCarousel').on('slide.bs.carousel', function () {
+            // do something…
+        })
+    </script>
+    {% endblock scripts %}
+    {% endblock content %}

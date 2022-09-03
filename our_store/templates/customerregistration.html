@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+    
+        {% block title %}
+            <title>customerregistration</title>
+        {% endblock title %}
+    
+        {% block content %}
+        <br>
+        <div class="sixthin wide column">
+            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                <div class="content">
+                    <div class="btn-group btn-group-justified">
+                        <a href="{% url 'our_store:allproducts' %}" class="btn btn-primary">All Products</a>
+                        {% if request.user.customer %}
+                        Welcome {{request.user.username}}!!
+                        <a href="{% url 'our_store:customerlogout' %}" class="btn btn-primary">Logout</a>
+                        {% else %}
+                        <a href="{% url 'our_store:customerregistration' %}" class="btn btn-primary">Create an account</a>
+                        <a href="{% url 'our_store:customerlogin' %}" class="btn btn-primary">Login</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <style>
+            .errorlist{
+                color: red;
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h3>Customer Registration Form</h3>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary">Create an account</button>
+            </form>
+            <p>Already have an account?<a href="{% url 'our_store:customerlogin' %}">Login here</a></p>
+            </div>
+        </div>
+        {% endblock content %}

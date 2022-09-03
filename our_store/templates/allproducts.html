@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+    
+        {% block title %}
+            <title>allproducts</title>
+        {% endblock title %}
+    
+           
+           
+        {% block content %}
+        <br>
+           <div class="sixthin wide column">
+                <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                    <div class="content">
+                        <div class="btn-group btn-group-justified" >
+                            <centre><h3>ALL CATEGORIES </h3></centre>
+                            <a href="{% url 'our_store:store' %}" class="btn btn-primary">Back to Our Store</a>
+                            <!--<a href="{% url 'our_store:mycart' %}" class="btn btn-primary">My Cart</a>-->
+                            {% if request.user.customer %}
+                        Welcome {{request.user.username}}!!
+                        <a href="{% url 'our_store:mycart' %}" class="btn btn-primary">My Cart</a>
+                        <a href="{% url 'our_store:customerprofile' %}" class="btn btn-primary">My Profile</a>
+                        <a href="{% url 'our_store:customerlogout' %}" class="btn btn-primary">Logout</a>
+                        {% else %}
+                       
+
+                        <a href="{% url 'our_store:customerregistration' %}" class="btn btn-primary">Create an account</a>
+                        <a href="{% url 'our_store:customerlogin' %}" class="btn btn-primary">Login</a>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% for cat in allcategories %}
+            <strong><h5>{{cat.title}}</h5></strong><hr>
+            <div class="row">
+                <!--<div class="box-element product">-->
+                    {% for p in cat.product_set.all %}
+                    <div class="col-md-3">
+                        <div class="m-4">
+                            <strong><h6><a href="{% url 'our_store:productdetail' p.slug %}">{{p.title}}</a></h6></strong>                           
+                            <img src="{{p.image.url}}" alt="" class="img-fluid" style="height: 
+                            2500; object-fit:cover;"> 
+                            <h5 style="display: inline-block; float: right; "><strong><p>Price: <strike>R{{p.marked_price | floatformat}}</strike>  | R 
+                            {{p.selling_price | floatformat}}</p></strong></h5>
+                            <a href="{% url 'our_store:addtocart' p.id %}" class="btn btn-outline-secondary add-btn update-cart">Add To Cart</a>
+                        </div>
+                    </div> 
+                    {% endfor %}   
+                </div>
+            {% endfor %}
+            </div>
+        
+{% endblock content %}
+            
+            
+    

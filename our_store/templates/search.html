@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+    
+        {% block title %}
+            <title>search</title>
+        {% endblock title %}
+    
+        {% block content %}
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--I MUST CHANG THE COLOR OF KEYWORD-->
+                    <h1>Search Results for <span class="text-info" style="background-color: white;">"{{request.GET.keyword}}"</span></h1>
+                    <hr>
+                    {% for result in results %}
+                    <div class="row">
+                        <img src="{{result.image.url}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h4><a href="{% url 'our_store:productdetail' result.slug %}">{{result.title}}</a></h4>
+                        <p>{{result.description | truncatewords:50}}</p>
+                        <p>Return Policy: {{result.return_policy}}</p>
+                        <a href="{% url 'our_store:addtocart' result.id %}" class="btn btn-outline-secondary add-btn update-cart">Add To Cart</a>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+       
+        {% endblock content %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+    <center><strong>
+        <h1>RFID in Hospitality</h1>
+    </strong></center>
+    
+    <hr>
+    {% block title %}
+    {% endblock title %}
+                <div class="ui grid">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src={% static 'image/hospitalityimages2.jpg' %}>
+                            <img src={% static 'image/hospitalityimages2.jpg' %}>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <h1>HOTELS TOO NEED BETTER INVENTORY MANAGEMENT</h1> 
+                            
+                            When talking about RFD, we all acknowledge the positive impact of RFID in asset-heavy industries
+                            like retail and logistics. However, there is one sector that is just beginning to realize not 
+                            using RFID is a huge missed opportunity. Hospitality has been constantly engaging with innovative
+                            technologies to enhance the customer experience and stand out in a competitive environment. 
+                            Therefore, it’s not surprising that more and more hotels are adopting RFID solutions.
+                            In fact, RFID or Radio-Frequency Identification is currently the best technology available for
+                            asset tracking and inventory management. Hotels deal with hundreds of assets that are constantly 
+                            moving in and out of their premises and can highly benefit from a smart inventory.
+                            </p>
+            
+                            <hr>
+                        </div>
+                        <div class="col-md-6">
+                            <img src={% static 'image/hospitalityimages3.jpg' %}>
+                            <img src={% static 'image/hospitalityimages4.jpg' %}>
+
+                        </div>
+                        <div class="col-md-6">
+                            <strong>WITH SMART INVENTORY MANAGEMENTS, HOTELS CAN:</strong>
+                            <br/>
+                            <p>Keep track of each item in their inventory.</p>
+                            <p>Optimize maintenance and replacement.</p>
+                            <p>Discourage theft and improve safety.</p>
+                            <p>Reduce losses and cut waste.</p>
+                    </div>
+                </div>
+        
+{% endblock content %}

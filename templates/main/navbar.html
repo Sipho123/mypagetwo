@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <nav class="navbar navbar-expand-lg "style="background-color: navy;">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'image/Logo001.jpg' %}" style="width:150px;height: 70px">
+      </a>
+        
+        <span style="position:absolute;left:15%">
+          <button class="button-73" role="button">
+            <a href="{% url 'home-view' %}">Home</a>
+          </button>
+        </span>  
+         
+        <ul class="main-nav" style="position:absolute;left:45%">
+          <li class="active"><a href="{% url 'our_store:store' %}">OUR STORE</a></li> 
+          <li><a href="{% url 'what_we_do-view' %}" >WHAT WE DO</a></li>
+          <li><a href="{% url 'industries-view' %}" >INDUSTRIES</a></li>
+          <li><a href="{% url 'get_in_touch-view' %} ">GET IN TOUCH</a></li>   
+          <li><a href="{% url 'who_we_are-view' %}" >WHO WE ARE</a></li>
+            <a href="{% url 'our_store:adminlogin' %}" class="btn btn-primary">Admin Login</a>
+        </ul>
+      </div>
+    </nav>
+  
+</body>

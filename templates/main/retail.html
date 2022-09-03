@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>retail</title>
+    {% endblock title %}
+{% block content %}
+    
+    <br>
+    <center>
+    <h1>RFID in Retail</h1>
+    </center>
+    <hr>
+    <div class="ui grid">
+        <br>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <img src={% static 'image/GS1au-banner-rfid-in-retail-848x250 03.jpg' %}>
+                <!--<img src='image.jpg' alt="Image" height="42" width="42">.-->
+            </div>
+
+            <div class="col-md-6">
+                <p>
+                Radio Frequency Identification (RFID) has been on the immediate horizon for the last 
+                decade. However, we are now at a point where several factors are driving the technology
+                forward and forcing the hand of manufacturers and retailers. Retailers crave sources of 
+                data to optimize their business; RFID creates a whole new set of data about their 
+                in-store environments, product movement, and customer behavior. As a result, companies 
+                that aren’t already piloting RFID are lagging the market, and those using the technology
+                must continue to develop additional capabilities around it due to its potential for 
+                massive cost savings and new revenue opportunities.
+                </p>
+                <hr>
+                <p>
+                <h1>RFID Technology Overview</h1>
+                RFID systems are composed of tags and a reader to read them. The RFID tag has two components,
+                a processor and an antenna. Tags can be active and use a battery, or passive and use power 
+                from the reader. The reader can be handheld or stationary and can vary in size and strength 
+                based on purpose. Tags can be on hangtags, stickers, or embedded in items. Tags can be given 
+                a unique fingerprint to be tracked individually.
+                </p>
+            </div>
+        </div>
+    </div>
+        
+{% endblock content %}

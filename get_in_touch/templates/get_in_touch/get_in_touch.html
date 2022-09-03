@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% block title %}
+    <title>get_in_touch</title>
+    {% endblock title %}
+        <br/>
+        <div class="ui grid">
+                    <div class="row">
+                        <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                            <center>
+                            <div class="welcome_note">
+                                <h1 class="text-center">Get in Touch - {{name}}</h1>
+                                <strong>
+                                <div class="sixthin wide column">
+                                    <div class="ui fluid card"  style="background-color: rgba(18, 15, 26, 0.4) " >
+                                    <centre><p style="color: white"> Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                                        a matter of hours to help you.</p> </centre>
+                                    </p></centre>
+                                    </div>
+                                </div>
+                                </strong>
+                            </div>
+                            </center>
+                        </div>
+                    </div>            
+                    <div class="row">
+                        <div class="sixthin wide column">
+                            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                                <div class="content">
+                                    <section class="mb-4">
+                                    <centre><p class="text-center w-responsive mx-auto mb-5">
+                                        <div class="row">
+                                            <!--Grid column-->
+                                            <div class="col-md-9 mb-md-0 mb-5">
+                                                <form id="contact-form" name="contact-form" action="{% url 'home-view' %}" method="POST">
+                                                    {% csrf_token %}
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-6">
+                                                            <div class="md-form mb-0">
+                                                                <input class="form-control" type="text" id="name" placeholder="First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="md-form mb-0">
+                                                                <input class="form-control" type="text" id="surname" placeholder="Last Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-6">
+                                                            <div class="md-form mb-0">
+                                                                <input class="form-control" type="text" id="name" placeholder="Company Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="md-form mb-0">
+                                                                <input class="form-control" type="text" id="surname" placeholder="Role">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-6">
+                                                            <div class="md-form mb-0">
+                                                                <input type="text" name="email" class="form-control" placeholder="Email Address">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="md-form mb-0">
+                                                                <input type="text" name="intiger" class="form-control" placeholder="Phone Number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-12">
+                                                            <div class="md-form mb-0">
+                                                                <input class="form-control" type="text" id="subject" placeholder="Subject">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-12">
+                                                            <div class="md-form">
+                                                                <input type="text" name="message" class="form-control" placeholder="Your message">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <br/><br/>
+                                                    <div class="text-center text-md-left">
+                                                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                                                    </div>
+                                                    <div class="status"></div>
+                                            </div>
+                                             <!--Grid column-->
+                                            <div class="col-md-3 text-center">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li>
+                                                        <button type="button" class="btn btn-secondary btn-lg btn-block">
+                                                            <a class="active" href="{% url 'consultation-view' %}" style="color: white ;" >Schadule your consultation now</a>
+                                                        </button>
+                                                    </li>
+                                                    <br/>
+                                                    <li>
+                                                        <button  href="#"type="button" class="btn btn-secondary btn-lg btn-block"></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div> 
+                                            
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+{% endblock content %}

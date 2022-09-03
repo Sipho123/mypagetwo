@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block title %}
+    <title>manufacturing</title>
+    {% endblock title %}
+
+  
+    
+    {% block content %}
+    <br>
+    <h1>RFID in Manufacturing</h1>
+    <hr>
+        
+        <div class="ui grid">
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src={% static 'image/mc3390xr-photography-application-manufacturing-man-pushing-keypad-print-300dpi-1024x690 (1).jpeg' %}>
+                </div>
+                <div class="col-md-7">
+                <strong>
+                    <p>
+                        The use of RFID technology in the manufacturing process offers many benefits to a manufacturing
+                 process. RFID can reduce the amount of paper needed to create the product, it allows for better 
+                 tracking of inventory, more accurate status of WIP, fewer manufacturing errors and a higher 
+                 quality product. Capturing the benefits of RFID technology in this arena is relatively easy 
+                 compared to some other applications because the RFID tags can be of the passive type and can be
+                 reused. It makes the value proposition very attractive for that reason alone.
+                     </p>
+                </strong>    
+                </div>
+            </div>
+        </div>
+{% endblock content %}

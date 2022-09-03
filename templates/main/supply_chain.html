@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+    {% block title %}
+    <title>supply_chain</title>
+    {% endblock title %}
+    <br>
+    <center>
+    <h1>RFID in Supply Chain</h1>
+    </center>
+    <hr>
+        <div class="ui grid">
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src={% static 'image/LogisticNSupply.png' %}>
+                </div>
+                <div class="col-md-6">
+                    <p>RFID systems are widely used to track intermediate bulk containers 
+                    (IBCs) in the chemicals industry, stillages in automotive plants, and industrial tanks 
+                    used to transport gases, oils and waste materials. By attaching RFID tags, containers can 
+                    be electronically identified from metres away. The tags can be read by fixed scanners as 
+                    they pass through doorways or key points in the production process, or by staff using 
+                    handheld readers.
+                    </p> 
+                    <hr>
+                    <p>Containers can be booked out automatically, assigned to a particular
+                    customer and batch. They can be checked back in again and inspected just as easily and 
+                    stocks can be audited quickly too. By replacing spreadsheets and manual processes, 
+                    RFID systems save time and reduce errors. The data collected is automatically uploaded 
+                    to a cloud-based system so anyone with access can see which IBCs are where, their history
+                    and overall usage. Integration with back office systems is also easily achievable, 
+                    allowing asset and ERP systems to be updated automatically.
+                    </p>
+    
+                    <hr>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+{% endblock content %}

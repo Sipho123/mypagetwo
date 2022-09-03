@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% block title %}
+    <title>get_in_touch</title>
+    {% endblock title %}
+        <br/><br/>
+                    <div class="row">
+                        <div class="sixthin wide column">
+                            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                                <div class="content">
+                                    <section class="mb-4">
+                                    <!--Section heading-->
+                                        <div class="section-heading">
+                                            <h2>send_email</h2>
+                                        </div>
+                                    <!--Section description--> 
+                                    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                                        a matter of hours to help you.</p> 
+                                        <div class="row">
+                                            <!--Grid column-->
+                                            <div class="col-md-9 mb-md-0 mb-5">
+                                                <form id="contact-form" name="contact-form" action="{% url 'send_email-view' %}" method="POST">
+                                                    {% csrf_token %}
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="md-form mb-0">
+                                                            <input class="form-control" type="text" id="name" placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid column-->
+                                                    <div class="col-md-6">
+                                                        <div class="md-form mb-0">
+                                                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid column-->
+                                                    <div class="col-md-6">
+                                                        <div class="md-form mb-0">
+                                                            <input type="email" name="toemail" class="form-control" placeholder="Send to Address">
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-12">
+                                                            <div class="md-form mb-0">
+                                                                <input class="form-control" type="text" id="subject" placeholder="Subject">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Grid row-->
+                                                    <div class="row">
+                                                        <!--Grid column-->
+                                                        <div class="col-md-12">
+                                                            <div class="md-form">
+                                                                <input type="text" name="message" class="form-control" placeholder="Your message">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                    <div class="text-center text-md-left">
+                                                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                                                    </div>
+                                                    <div class="status"></div>
+                                            </div>
+                                        </div>     
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+{% endblock content %}

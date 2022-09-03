@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+    
+        {% block title %}
+            <title>adminlogin</title>
+        {% endblock title %}
+    
+        {% block content %}
+        <br>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h3>Admin Login</h3>
+                <hr>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary">Login as Admin</button>
+                {% if error %}
+                <li style="color: red;">{{error}}</li>
+                {% endif %}
+            </form>
+            <p>Forgot password?<a href="">Reset now</a></p>
+            <p>Don't you have an account?<a href="">register here</a></p>
+            </div>
+        </div>
+        {% endblock content %}

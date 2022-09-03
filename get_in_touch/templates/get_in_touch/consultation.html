@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+                
+{% block content %}
+                    {% block title %}
+                    <title>consultation</title>
+                    {% endblock title %}
+                    <!-- SCHEDULE FORM -->
+                    <br/>
+                    
+    <div class="ui grid">
+      <div class="row">
+        <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+          <center>
+          <div class="welcome_note">
+            
+            <h1 class="text-center">Welcome!!</h1>
+            <strong>
+              
+              <div class="sixthin wide column">
+                <div class="ui fluid card"  style="background-color: rgba(18, 15, 26, 0.4) " >
+                  <centre><p style="color: white"> We’re so glad you’re here, we appreciate your interest.
+                    We will do our best to honor this CONSULTATION.
+                  </p></centre>
+                </div>
+              </div>
+            </strong>
+          </div></center>
+        </div>
+      </div>            
+      <!--Grid row-->
+    
+      <div class="row">
+        <div class="sixthin wide column">
+            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+              <section class="mb-4">
+                <div class="col-md-9 mb-md-0 mb-5">
+                  <form id="contact-form" name="contact-form" action="{% url 'consultation-view' %}" method="POST">
+                    {% csrf_token %} 
+                    <br/>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="date" id="begin" placeholder="dd-mm-yyyy" min="2020-01-01" max="2030-12-31">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="time" id="time" value="" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="text" id="name" placeholder="First Name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="text" id="surname" placeholder="Last Name">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="text" id="name" placeholder="Company Name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="text" id="surname" placeholder="Role">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" name="email" class="form-control" placeholder="Email Address">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" name="intiger" class="form-control" placeholder="Phone Number">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <input class="form-control" type="text" id="subject" placeholder="Subject">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <div class="md-form">
+                            <input type="text" name="message" class="form-control" placeholder="Your message">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <br/>
+                  <div class="text-center text-md-left">
+                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four wide column">
+          <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+          </div>
+        </div>
+        <div class="eight wide column">
+          <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+            <div class="content">
+              <h3>Please review your details:</h3>
+                    <strong>Date:</strong>{{date}}<br/> 
+                    <strong>Time:</strong>{{time}}<br/>
+                    <strong>Name:</strong>{{name}}<br/>
+                    <strong>Last Name:</strong>{{last_name}}<br/>
+                    <strong>Company Name:</strong>{{company_name}}<br/>
+                    <strong>Role:</strong>{{role}}<br/>
+                    <strong>Phone Nome:</strong>{{phone_number}}<br/>
+                    <strong>Subject:</strong>{{subject}}<br/>
+                    <strong>Email:</strong>{{email}}<br/>
+                    <strong>Address:</strong>{{address}}<br/>
+                    <strong>Massage:</strong>{{massage}}<br/>
+            </div>
+          </div>
+        </div>
+        <div class="four wide column">
+          <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+          </div>
+        </div>
+      </div>
+    </div>  
+                            <br/> <br/>
+                {% endblock content %}
+                    

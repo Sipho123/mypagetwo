@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block title %}
+    <title>medical</title>
+    {% endblock title %}
+    {% block content %}
+    <br/>
+    <h1>RFID in Medical</h1>
+        <hr>
+        <div class="ui grid">
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src={% static 'image/medical .jpg' %}>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        In this industry, there is no room for error. You need to have knowledge and control of your critical assets and medical
+                        equipment, no matter what. In the health and aged care sector you need to provide a high level of service and safety 
+                        for your patients, and guests, and be more diligent than ever in the tracking and accountability of Portable Medical 
+                        Equipment PME and PPE control. There’s a lot riding on every decision and action, and there’s a lot to lose.
+                    </p>
+    
+                    <hr>
+                    <p>
+                        <strong>When it comes to medical equipment tracking and hospital asset management, certainty matters.</strong> The healthcare and aged 
+                        care sector are one of the most highly regulated industries in the world. Good governance, compliance and risk mitigation
+                        are critical to your business. Your employees rely on having the right equipment in good condition for those that they
+                        serve. In your world, it could be the difference between life and death.
+                    </p>
+                </div>
+            </div>
+        </div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=devise-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    </head>
+    <body style="background-color: burlywood;">
+        <div class="container" >
+            <br>
+            <a href="{% url 'our_store:store' %}" target="_blank"  class="btn btn-primary">Visit site</a>
+            <a href="{% url 'our_store:adminorderlist' %}" target="_blank" class="btn btn-primary">All Orders</a>
+            <a href="{% url 'our_store:adminhome' %}" class="btn btn-primary">Pending Orders</a>
+            <a href="{% url 'our_store:adminproductlist' %}" target="_blank" class="btn btn-primary">All Products</a>
+            {% if request.user.customer %}
+            <strong>Welcome{{request.user.username}}!!</strong>
+            <a href="{% url 'our_store:adminlogin' %}" target="_blank"  class="btn btn-primary">Admin Login</a>
+            {% else %}
+            <a href="{% url 'our_store:adminlogout' %}" target="_blank"  class="btn btn-primary">Admin Logout</a>
+            {% endif %}
+            
+            {% block content %}
+        
+            {% endblock %}
+        </div>
+
+    </body>
+    <hr>
+    <footer>
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <!--<div class="footer" position: fixed; text-align: center; padding: 3px; background-color: DarkSalmon;color: white;>-->
+                <p>© Copyright 2022, Rfidesign, pty LTD. All rights reserved.</p>
+                    
+        </div>
+           
+    </footer>
+        <hr>
+</html>

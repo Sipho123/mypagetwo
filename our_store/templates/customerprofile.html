@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load humanize %}
+    
+    
+        {% block title %}
+            <title>customerprofile</title>
+        {% endblock title %}
+    
+        {% block content %}
+        <br>
+        <div class="sixthin wide column">
+            <div class="ui fluid card" style="background-color: rgb(201, 224, 238);">
+                <div class="content">
+                    <div class="btn-group btn-group-justified" >
+                        <centre><h3>MY PROFILE</h3></centre>
+                        <a href="{% url 'our_store:store' %}" class="btn btn-primary">Back to Our Store</a>
+                        {% if request.user.customer %}
+                    Welcome {{request.user.username}}!!
+                    <a href="{% url 'our_store:mycart' %}" class="btn btn-primary">My Cart</a>
+                    <a href="{% url 'our_store:customerprofile' %}" class="btn btn-primary">My Profile</a>
+                    <a href="{% url 'our_store:customerlogout' %}" class="btn btn-primary">Logout</a>
+                    {% else %}
+                   
+
+                    <a href="{% url 'our_store:customerregistration' %}" class="btn btn-primary">Create an account</a>
+                    <a href="{% url 'our_store:customerlogin' %}" class="btn btn-primary">Login</a>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <h3>Detail Information</h3><hr>
+                <p><span class="font-weight-bold">Full_name:</span>{{customer.full_name}}</p>
+                <p><span class="font-weight-bold">Username:</span>{{customer.username}}</p>
+                <p><span class="font-weight-bold">Email:</span>{{customer.email}}</p>
+                <p><span class="font-weight-bold">Address:</span>{{customer.address}}</p>
+                <p><span class="font-weight-bold">Joined_on :</span>{{customer.joined_on}}</p>
+            </div>
+            <div class="col-md-8 mx-auto">
+                <h3>Previous Order</h3><hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Order ID</th>
+                            <th>Amount</th>
+                            <th>Order</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ord in orders %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td><a href="{% url 'our_store:customerorderdetail' ord.pk %}">#ORDER{{ord.id}}</a></td>
+                            <td>{{ord.total}}</td>
+                            <td>{{ord.created_at|timesince}} ago</td>
+                            <td>{{ord.order_status}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                        
+
+                </table>
+
+            </div>
+        </div>
+        {% endblock content %}
